@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body class="bg-body">
+
+    <div class=" container w-50 ">
+
+        <h2 class="text-center m-3 mb-4">Sign up</h2>
+
+        <div class="bg-primary-subtle rounded-5 shado px-5 pt-5 pb-3 d-flex justify-content-center">
+
+            <div class="container">
+
+
+                <div class="form-floating needs-validation    mb-3">
+                    <input  onchange="cng()" type="text" class="form-control" id="name" placeholder="Enter your name">
+                    <label for="name">Enter Your Name</label>
+                    <div class="valid-feedback ">hids</div>
+                </div>
+
+
+
+
+                <div class="form-floating  mb-3">
+                    <input  onchange="cng()" type="text" class="form-control" id="email" placeholder="Enter your name" required>
+                    <label for="email">Enter Your Email address</label>
+                </div>
+
+                <div class="input-group form-floating mb-3">
+                    <input  onchange="cng()"  type="password" class="form-control" id="password" placeholder="Username" required>
+                    <label for="password">Enter New Password</label>
+
+                    <button onclick="eye()" class="input-group-text"><i class="bi bi-eye-fill"></i></button>
+
+                </div>
+
+                <div class=" form-floating mb-3">
+                    <input  onchange="cng()" type="password" class="form-control" id="conpassword" placeholder="Confirm Password">
+                    <label for="conpassword">Confirm Password</label>
+
+
+
+                </div>
+
+                <button  onclick="snd()" type="submit" class="btn  btn-primary">Signup <span class=""></span> </button>
+                <button onclick="can()" class="btn  btn-danger">Cancel</button>
+
+
+                <p class="text-dark-emphasis mt-3 text-center">Already have an account ? <a href="index.html" class="text-decoration-none" href="">Login</a></p>
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="alert alert-danger mt-2 mx-auto w-25 d-none ">
+        <strong>Error</strong> All are required fields
+        
+      </div>
+
+      <div class="alert alert-danger mt-2 mx-auto w-25 d-none ">
+        <strong>Error</strong> Enter the same password
+        
+      </div>
+
+      
+      
+
+
+
+
+
+
+      <input id="st" type="text" class="d-none">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

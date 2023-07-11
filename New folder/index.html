@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-12 text-bg-dark  dow overflow-y-auto" style="height: 100vh;">
+
+                <h2 class="px-4 text-danger pt-3">Text Custoimize</h2>
+
+                <h4 class="mt-5 text-primary">Background Style</h4>
+                <!-- <div class="btn-group border  border-white">
+                    <button onclick="black()" class="btn btn-dark">Black</button>
+                    <button onclick="green()" class="btn btn-success">Green</button>
+                    <button onclick="red()" class="btn btn-danger">Red</button>
+                    <button onclick="blue()" class="btn btn-primary">Blue</button>
+                    <button onclick="white()" class="btn btn-light">White</button>
+                </div> -->
+                <label for="bgcolor">Background Color</label>
+                <input class="mt-3 form-control-color rounded-2 " type="color" onchange="bgcolo()" id="bgcolor"
+                    value="#ffffff">
+
+                <h5 class="mt-4 text-primary mb-4">Change background image</h5>
+                <label class="  p-4 rounded-4 mx-auto d-block text-center w-75 border-dashed" for="bgimage">Upload
+                    image</label>
+                <input class="d-none" type="file" onchange="imgccc()" id="bgimage">
+                <button onclick="remobgimg()" class="btn btn-primary mt-3 mx-auto d-block">Remove background
+                    image</button>
+
+
+
+                <div class=" mt-4">
+                    <h5 class="text-primary">Text Editors</h5>
+
+                    <input onchange="tex()" id="texx" class="form-control mb-3" type="text" value="Text Here">
+                    <label for="txtcolor" class="">Text Color</label>
+                    <input type="color" class=" my-3 mt-2 mb-4 form-control-color rounded-2" onchange="txco()"
+                        id="txtcolor" value=""><br>
+
+                    <label onclick="shad()" id="sbs" class="btn btn-light " for="sc">Add Shadow</label>
+                    <input type="checkbox" id="sc" class="d-none">
+
+                    <label class="ms-1" for="scolor">Shadow Color</label>
+                    <input onchange="scoloo()" type="color" class="form-control-color mb-4  rounded-3" name=""
+                        id="scolor">
+
+
+                    <label onclick="bold()" class="btn btn-light" id="boldbtn" for="Bold">Bold</label>
+                    <input class="d-none" id="Bold" type="checkbox">
+
+                    <label onclick="italic()" class="btn btn-light" id="italicbtn" for="italic">Italic</label>
+                    <input class="d-none" id="italic" type="checkbox">
+
+                    <div class="dropdown float-end ">
+                        <button class="  btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Text decoration
+                        </button>
+                        <ul class="dropdown-menu bg-info">
+                            <li><a onclick="sul()" id="ssul" class="dropdown-item" href="#">Underline</a></li>
+                            <li><a onclick="dul()" id="ddul" class="dropdown-item" href="#">Dotted Undeline</a></li>
+                            <li><a onclick="daul()" id="daaul" class="dropdown-item" href="#">Dashed Underline</a></li>
+                        </ul>
+                    </div>
+
+                    <label class="mt-5  " for="deccol">Underline color</label>
+                    <input onchange="dcolor()" class="ms-3 rounded-3 form-control-color" type="color" id="deccol"><br>
+
+
+                    <!-- <div class="btn-group border  border-white">
+                        <button onclick="txblack()" class="btn btn-dark">Black</button>
+                        <button onclick="txgreen()" class="btn btn-success">Green</button>
+                        <button onclick="txred()" class="btn btn-danger">Red</button>
+                        <button onclick="txblue()" class="btn btn-primary">Blue</button>
+                        <button onclick="txwhite()" class="btn btn-light">White</button>
+                    </div> -->
+
+
+
+                    <label for="size">Font Size</label>
+                    <input type="range" class="mt-4 w-50 ms-3" onchange="stize()" class="" min="5" max="200" value="50"
+                        id="size">
+
+                    <div class="dropdown my-3 ">
+                        <button class=" w-100 btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Font Style
+                        </button>
+                        <ul class="dropdown-menu  bg-info ">
+                            <li><a onclick="fth()" class="dropdown-item" id="tbtn" href="#">Times New Roman</a></li>
+                            <li><a onclick="fo()" class="dropdown-item" id="fbtn" href="#">Charcoal</a></li>
+                            <li><a onclick="ft()" class="dropdown-item" id="sbtn" href="#">Poppins</a></li>
+
+                        </ul>
+                    </div>
+
+
+                    <a class="btn ms-4 mt-4 mb-5 btn-danger" href="index.html">Reset All</a>
+                    <button onclick="print()" class="btn mt-4 me-4 btn-success float-end">Download</button>
+                    <div class="mt-5 mb-5"><img src="" alt=""></div>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-md-9 col-12 " style="height: 100vh;">
+                <div class="containe downlo overflow-hidden ">
+                    <div id="bg" class="border overflow-hidden  border-2 border-black rounded-3 mx-auto  my-5"
+                        style="width: 400px; height: 400px;">
+                        <img class="h-100 d-flex justify-content-center position-relative" src="" id="bgb" alt="">
+                        <div class="mt-center">
+                            <p id="text" style="width: 400px; height: 225px;" class=" overflow-hidden ">Text Here</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

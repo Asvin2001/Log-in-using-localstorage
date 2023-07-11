@@ -1,0 +1,38 @@
+.border-dashed{
+    border-style: dashed;
+    
+}
+
+.mt-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: black; */
+    width: 400px;
+    height: 400px;
+   
+}
+
+
+
+@media print{
+    *{
+        visibility: hidden;
+    }
+
+    
+
+    
+    
+}
+
+
+
+#text{
+    position: absolute;
+    top: 180px;
+    display: flex;
+    justify-content: center;
+}
+
+
